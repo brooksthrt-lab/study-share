@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Study Share</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a> |
+        <a href="/upload">Upload</a> |
+        <a href="/signup">Sign Up</a> |
+        <a href="/login">Login</a> |
+        <a href="/logout">Logout</a>
+    </nav>
+    <hr>
+
+    <h1>Study Materials</h1>
+    <ul>
+        {% for material in materials %}
+            <li>
+                <strong>{{ material[1] }}</strong> ({{ material[2] }}) — 
+                uploaded by {{ material[5] }} on {{ material[4] }}
+                <br>
+                <a href="{{ material[3] }}" target="_blank">Download</a>
+            </li>
+            <br>
+        {% endfor %}
+    </ul>
+</body>
+</html>
