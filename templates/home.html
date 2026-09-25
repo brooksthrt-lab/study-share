@@ -1,18 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Study Share</title>
-</head>
-<body>
-    <nav>
-        <a href="/">Home</a> |
-        <a href="/upload">Upload</a> |
-        <a href="/signup">Sign Up</a> |
-        <a href="/login">Login</a> |
-        <a href="/logout">Logout</a>
-    </nav>
-    <hr>
+{% extends "base.html" %}
 
+{% block title %}Study Share - Home{% endblock %}
+
+{% block content %}
     <h1>Study Materials</h1>
     <ul>
         {% for material in materials %}
@@ -25,5 +15,4 @@
             <br>
         {% endfor %}
     </ul>
-</body>
-</html>
+{% endblock %}

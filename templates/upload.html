@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Upload Material - Study Share</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}Upload Material - Study Share{% endblock %}
+
+{% block content %}
     <h1>Upload Study Material</h1>
     <form method="POST" enctype="multipart/form-data">
         <label>Title</label>
@@ -17,6 +16,4 @@
 
         <button type="submit">Upload</button>
     </form>
-    <p><a href="/">Back to home</a></p>
-</body>
-</html>
+{% endblock %}

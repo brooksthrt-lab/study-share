@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Sign Up - Study Share</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}Sign Up - Study Share{% endblock %}
+
+{% block content %}
     <h1>Sign Up</h1>
     <form method="POST">
         <label>Name</label>
@@ -24,5 +23,4 @@
         <button type="submit">Sign Up</button>
     </form>
     <p>Already have an account? <a href="/login">Log in</a></p>
-</body>
-</html>
+{% endblock %}

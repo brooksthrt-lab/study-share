@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Study Share{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a> |
+        <a href="/upload">Upload</a> |
+        {% if session.user_id %}
+            <span>Welcome, {{ session.user_name }}</span> |
+            <a href="/logout">Logout</a>
+        {% else %}
+            <a href="/signup">Sign Up</a> |
+            <a href="/login">Login</a>
+        {% endif %}
+    </nav>
+    <hr>
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
